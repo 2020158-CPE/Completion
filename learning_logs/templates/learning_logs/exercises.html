@@ -1,0 +1,19 @@
+{% extends "learning_logs/index.html" %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<h2> The Programming Language used in this Section is Python </h2/>
+
+    <p><h3><a href= "{% url 'learning_logs:exer1' %}">Execises #1</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer2' %}">Execises #2</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer3' %}">Execises #3 & 4</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer5' %}">Execises #5</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer6' %}">Execises #6</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer7' %}">Execises #7</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer8' %}">Execises #8</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer9' %}">Execises #9</a></h3></p>
+    <p><h3><a href= "{% url 'learning_logs:exer10' %}">Execises #10</a></h3></p>
+   
+{% endblock content %}

@@ -1,0 +1,104 @@
+<body style="background-color:white;">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>Completion Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+ 
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  /* Header/Logo Title */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+  }
+  
+  /* Page Content */
+  .content {padding:20px;}
+  </style>
+  </head>
+  <body>
+  
+  <div class="header">
+    <h1>Completion</h1>
+    <p><!-- Navigation -->
+      <nav>
+        <h1>
+        <a href= "{% url 'learning_logs:index' %}">Home</a>
+      
+        <a href= "{% url 'learning_logs:exercises' %}">Exercises</a>
+      
+        <a href= "{% url 'learning_logs:about' %}">About Student</a>
+        </h1>
+      </nav>
+      </body>
+      </p>
+  </div>
+  
+  <div class="content">
+    
+  </div>
+  
+  </body>
+  </html>
+  
+
+{% block content %}
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<body>
+
+
+<h2>Learn about OOP</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="Slide" src="{% static 'learning_logs/media/slide1.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide2.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide3.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide4.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide5.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide6.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide7.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide8.jpg' %}" style="width:80%">
+  <img class="Slide" src="{% static 'learning_logs/media/slide9.jpg' %}" style="width:80%">
+
+  
+
+  <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("Slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
+
+
+{% endblock content %}
